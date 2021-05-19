@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CollectionViewPagingLayout",
+        "repositoryURL": "https://github.com/amirdew/CollectionViewPagingLayout",
+        "state": {
+          "branch": null,
+          "revision": "d0a64c0fc5c6ca095689c4d4ea1b8d1660c10439",
+          "version": "1.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

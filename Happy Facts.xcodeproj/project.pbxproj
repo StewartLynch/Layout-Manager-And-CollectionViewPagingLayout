@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB5F0B73265457AA00815F26 /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = BB5F0B72265457AA00815F26 /* CollectionViewPagingLayout */; };
 		BBDA22AE2654196B00A12523 /* Happy_FactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA22AD2654196B00A12523 /* Happy_FactsApp.swift */; };
 		BBDA22B02654196B00A12523 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA22AF2654196B00A12523 /* ContentView.swift */; };
 		BBDA22B22654196C00A12523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDA22B12654196C00A12523 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5F0B73265457AA00815F26 /* CollectionViewPagingLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +96,9 @@
 			dependencies = (
 			);
 			name = "Happy Facts";
+			packageProductDependencies = (
+				BB5F0B72265457AA00815F26 /* CollectionViewPagingLayout */,
+			);
 			productName = "Happy Facts";
 			productReference = BBDA22AA2654196B00A12523 /* Happy Facts.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +126,9 @@
 				Base,
 			);
 			mainGroup = BBDA22A12654196B00A12523;
+			packageReferences = (
+				BB5F0B71265457AA00815F26 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
+			);
 			productRefGroup = BBDA22AB2654196B00A12523 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +348,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB5F0B71265457AA00815F26 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amirdew/CollectionViewPagingLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB5F0B72265457AA00815F26 /* CollectionViewPagingLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB5F0B71265457AA00815F26 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */;
+			productName = CollectionViewPagingLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BBDA22A22654196B00A12523 /* Project object */;
 }

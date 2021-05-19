@@ -6,23 +6,38 @@
 //
 
 import SwiftUI
+import CollectionViewPagingLayout
 
 struct ContentView: View {
     @StateObject var factListVM = FactListViewModel()
-    
+    var options: StackTransformViewOptions {
+           .layout(.vortex)
+       }
     var body: some View {
         NavigationView {
-            List(factListVM.facts) { fact in
-                NavigationLink(
-                    destination: DetailView(id: fact.id, vm: factListVM)) {
-                    HStack {
-                        Image(fact.imageName)
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                        Text(fact.title)
-                            .font(.title)
-                    }
+            VStack {
+                StackPageView(factListVM.facts, selection: $factListVM.selectedFactId) { fact in
+                    Image(fact.imageName)
+                        .resizable()
+                        .frame(width: 300, height: 300)
+                        .overlay(Text(fact.photoCredit)
+                                    .font(.callout)
+                                    .padding(6)
+                                    .foregroundColor(.white)
+                                    .background(Color.black.opacity(0.8))
+                                    .cornerRadius(10)
+                                    .padding(6),
+                                 alignment: .bottomTrailing)
                 }
+                .options(options)
+                .pagePadding(
+                    vertical: .absolute(20),
+                    horizontal: .absolute(100)
+                )
+                if factListVM.selectedFactId != nil {
+                    DetailView(id: factListVM.selectedFactId, vm: factListVM)
+                }
+                Spacer()
             }
             .navigationTitle("Happy Facts")
         }.onAppear {

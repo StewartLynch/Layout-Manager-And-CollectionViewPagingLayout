@@ -9,7 +9,7 @@ import Foundation
 
 class FactListViewModel: ObservableObject {
     @Published var facts:[Fact] = []
-
+    @Published var selectedFactId:UUID?
     func fetch() {
         facts = [
             Fact(title: "Sleeping Otters", imageName: "Otters", photoCredit: "commons.wikimedia.org", caption: "Sea otters hold hands when they sleep to keep from drifting apart"),
@@ -19,6 +19,7 @@ class FactListViewModel: ObservableObject {
             Fact(title: "Chinese Panda", imageName: "Panda", photoCredit: "Cute Baby Animals", caption: "In China, killing a Panda is punishable by death."),
             Fact(title: "Penguin Marriage", imageName: "Penguins", photoCredit:"telegraph.co.uk", caption: "Gentoo penguins propose to their lifemates with a pebble.")
         ]
+        selectedFactId = facts[0].id
     }
     
     func selectedFact(id: UUID?) -> Fact? {
