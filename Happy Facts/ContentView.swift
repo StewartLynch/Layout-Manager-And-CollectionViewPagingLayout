@@ -10,13 +10,13 @@ import CollectionViewPagingLayout
 
 struct ContentView: View {
     @StateObject var factListVM = FactListViewModel()
-    var options: StackTransformViewOptions {
-           .layout(.vortex)
-       }
+    var options: ScaleTransformViewOptions {
+        .layout(.linear)
+    }
     var body: some View {
         NavigationView {
             VStack {
-                StackPageView(factListVM.facts, selection: $factListVM.selectedFactId) { fact in
+                ScalePageView(factListVM.facts, selection: $factListVM.selectedFactId) { fact in
                     Image(fact.imageName)
                         .resizable()
                         .frame(width: 300, height: 300)
@@ -36,6 +36,9 @@ struct ContentView: View {
                 )
                 if factListVM.selectedFactId != nil {
                     DetailView(id: factListVM.selectedFactId, vm: factListVM)
+                }
+                Button("Add Fact") {
+                    factListVM.newFact()
                 }
                 Spacer()
             }

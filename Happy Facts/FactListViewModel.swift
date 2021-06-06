@@ -17,13 +17,18 @@ class FactListViewModel: ObservableObject {
             Fact(title: "Breathing Turtles", imageName: "Turtle", photoCredit: "TaraDSturm", caption: "Turtles can breathe through their butts."),
             Fact(title: "Tree Planters", imageName: "Squirell", photoCredit: "Irene Mei", caption: "Squirrels plant thousands of new trees each year simply by forgetting where they put their acorns."),
             Fact(title: "Chinese Panda", imageName: "Panda", photoCredit: "Cute Baby Animals", caption: "In China, killing a Panda is punishable by death."),
-            Fact(title: "Penguin Marriage", imageName: "Penguins", photoCredit:"telegraph.co.uk", caption: "Gentoo penguins propose to their lifemates with a pebble.")
         ]
         selectedFactId = facts[0].id
     }
     
     func selectedFact(id: UUID?) -> Fact? {
         return facts.first(where: {$0.id == id})
+    }
+
+    func newFact() {
+        // This updates the @Published property, but the view does not refresh
+        print("Adding Fact")
+        facts.append(Fact(title: "Penguin Marriage", imageName: "Penguins", photoCredit:"telegraph.co.uk", caption: "Gentoo penguins propose to their lifemates with a pebble."))
     }
 }
 
