@@ -9,7 +9,7 @@ import Foundation
 
 class FactListViewModel: ObservableObject {
     @Published var facts:[Fact] = []
-    @Published var selectedFactId:UUID?
+    @Published var selectedFactId:String?
     func fetch() {
         facts = [
             Fact(title: "Sleeping Otters", imageName: "Otters", photoCredit: "commons.wikimedia.org", caption: "Sea otters hold hands when they sleep to keep from drifting apart"),
@@ -21,7 +21,12 @@ class FactListViewModel: ObservableObject {
         selectedFactId = facts[0].id
     }
     
-    func selectedFact(id: UUID?) -> Fact? {
+    func fetchFromJSON() {
+        facts = Bundle.main.decode([Fact].self, from: "Facts.json")
+        selectedFactId = facts[0].id
+    }
+    
+    func selectedFact(id: String?) -> Fact? {
         return facts.first(where: {$0.id == id})
     }
 

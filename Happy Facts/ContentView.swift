@@ -24,10 +24,10 @@ struct ContentView: View {
                                     .font(.callout)
                                     .padding(6)
                                     .foregroundColor(.white)
-                                    .background(Color.black.opacity(0.8))
+                                    .background(Color.black.opacity(0.4))
                                     .cornerRadius(10)
-                                    .padding(6),
-                                 alignment: .bottomTrailing)
+                                    .padding(6))
+                                 
                 }
                 .options(options)
                 .pagePadding(
@@ -44,7 +44,7 @@ struct ContentView: View {
             }
             .navigationTitle("Happy Facts")
         }.onAppear {
-            factListVM.fetch()
+            factListVM.fetchFromJSON()
         }
     }
 }

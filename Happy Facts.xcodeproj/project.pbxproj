@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BB5F0B73265457AA00815F26 /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = BB5F0B72265457AA00815F26 /* CollectionViewPagingLayout */; };
+		BB94B41626C822A700DA426C /* Facts.json in Resources */ = {isa = PBXBuildFile; fileRef = BB94B41526C822A700DA426C /* Facts.json */; };
+		BB94B41826C8232200DA426C /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB94B41726C8232200DA426C /* Bundle+Extension.swift */; };
 		BBDA22AE2654196B00A12523 /* Happy_FactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA22AD2654196B00A12523 /* Happy_FactsApp.swift */; };
 		BBDA22B02654196B00A12523 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA22AF2654196B00A12523 /* ContentView.swift */; };
 		BBDA22B22654196C00A12523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDA22B12654196C00A12523 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB94B41526C822A700DA426C /* Facts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Facts.json; sourceTree = "<group>"; };
+		BB94B41726C8232200DA426C /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		BBDA22AA2654196B00A12523 /* Happy Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDA22AD2654196B00A12523 /* Happy_FactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happy_FactsApp.swift; sourceTree = "<group>"; };
 		BBDA22AF2654196B00A12523 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				BBDA22BE265419DA00A12523 /* FactListViewModel.swift */,
 				BBDA22B12654196C00A12523 /* Assets.xcassets */,
 				BBDA22B62654196C00A12523 /* Info.plist */,
+				BB94B41526C822A700DA426C /* Facts.json */,
+				BB94B41726C8232200DA426C /* Bundle+Extension.swift */,
 				BBDA22B32654196C00A12523 /* Preview Content */,
 			);
 			path = "Happy Facts";
@@ -145,6 +151,7 @@
 			files = (
 				BBDA22B52654196C00A12523 /* Preview Assets.xcassets in Resources */,
 				BBDA22B22654196C00A12523 /* Assets.xcassets in Resources */,
+				BB94B41626C822A700DA426C /* Facts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBDA22B02654196B00A12523 /* ContentView.swift in Sources */,
+				BB94B41826C8232200DA426C /* Bundle+Extension.swift in Sources */,
 				BBDA22BF265419DA00A12523 /* DetailView.swift in Sources */,
 				BBDA22C1265419DA00A12523 /* FactListViewModel.swift in Sources */,
 				BBDA22AE2654196B00A12523 /* Happy_FactsApp.swift in Sources */,

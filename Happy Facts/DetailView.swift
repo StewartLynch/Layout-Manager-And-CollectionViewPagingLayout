@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
-    let id: UUID?
+    let id: String?
     var vm:FactListViewModel
     var body: some View {
             VStack {

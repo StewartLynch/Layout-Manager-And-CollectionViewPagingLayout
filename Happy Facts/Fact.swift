@@ -8,8 +8,10 @@
 import Foundation
 
 
-struct Fact: Identifiable {
-    let id = UUID()
+struct Fact: Identifiable, Decodable {
+    var id:String {
+        title
+    }
     let title: String
     let imageName: String
     let photoCredit: String
